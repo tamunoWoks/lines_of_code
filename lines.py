@@ -6,7 +6,7 @@ def main():
     elif len(argv) > 2:
         exit('Too many command_line arguments')
     else:
-        if not argv.endswith('.py'):
+        if not argv[1][-3] != '.py':
             exit('Not a python file')
         else:
             print(count(argv[1]))
