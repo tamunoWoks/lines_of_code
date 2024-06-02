@@ -9,7 +9,7 @@ def main():
         if not argv.endswith('.py'):
             exit('Not a python file')
         else:
-            pass
+            print(count(argv[1]))
 
 
 def count(file):
