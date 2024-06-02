@@ -12,5 +12,17 @@ def main():
             pass
 
 
+def count(file):
+    try:
+        lines = 0
+        with open(file, 'r') as f:
+            for line in f:
+                if not (line.strip().startswith('#') or line.strip() == ''):
+                    lines += 1
+        return lines
+    except FileNotFoundError:
+        exit('File does not exist')
+
+
 if __name__ == '__main__':
     main()
